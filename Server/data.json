@@ -1,23 +1,83 @@
 {
   "subjects": [
     {
-      "math": {
-        "questions": [
-          {
-            "id": 1,
-            "text": "Rasult of 2*3 ",
-            "options": ["4", "5", "8", "6"],
-            "answer": "6"
-          },
-          {
-            "id": 2,
-            "text": "Result of 20-2*10",
-            "options": ["190", "27", "18", "0"],
-            "answer": "0"
-          }
-        ]
-      }
+      "id": 1,
+      "name": "Math",
+      "questions": [
+        {
+          "id": 1,
+          "text": "What is the result of 2 + 2?",
+          "options": ["2", "3", "4", "5"],
+          "answer": "4"
+        },
+        {
+          "id": 2,
+          "text": "What is the value of pi (to 2 decimal places)?",
+          "options": ["3.14", "3.141", "3.1415", "3.14159"],
+          "answer": "3.14"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Science",
+      "questions": [
+        {
+          "id": 1,
+          "text": "What is the atomic number of oxygen?",
+          "options": ["6", "7", "8", "9"],
+          "answer": "8"
+        },
+        {
+          "id": 2,
+          "text": "What is the largest planet in our solar system?",
+          "options": ["Jupiter", "Saturn", "Uranus", "Neptune"],
+          "answer": "Jupiter"
+        }
+      ]
     }
   ],
-  "users": {}
+
+  "users": [
+    {
+      "id": 1,
+      "role": "Admin",
+      "data": [
+        {
+          "id": 1,
+          "name": "Ahmad",
+          "email": "ahmad@admin.com",
+          "password": "12345",
+          "age": 30
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "role": "normal",
+      "data": [
+        {
+          "id": 1,
+          "name": "John Doe",
+          "email": "johndoe@example.com",
+          "password": "12345",
+          "age": 30
+        },
+        {
+          "id": 2,
+          "name": "Jane Smith",
+          "email": "janesmith@example.com",
+          "password": "12345",
+          "age": 25
+        },
+        {
+          "id": 3,
+          "name": "Bob Johnson",
+          "email": "bobjohnson@example.com",
+          "password": "12345",
+          "age": 45
+        }
+      ]
+    }
+  ]
 }
