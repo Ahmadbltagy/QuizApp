@@ -1,21 +1,19 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  user = {
+  constructor(private _authService: AuthService) {}
+  model = {
     email: '',
-    password: ''
+    password: '',
   };
 
   loginUser() {
-    // Add your login logic here
-    console.log('Login button clicked');
-    console.log('Email:', this.user.email);
-    console.log('Password:', this.user.password);
+    this._authService.loggedIn(this.model);
   }
 }

@@ -45,7 +45,7 @@
       "role": "Admin",
       "name": "Ahmad",
       "email": "ahmad@admin.com",
-      "password": "12345",
+      "password": "123456",
       "age": 30
     },
 
@@ -54,7 +54,7 @@
       "role": "normal",
       "name": "John Doe",
       "email": "johndoe@example.com",
-      "password": "12345",
+      "password": "123456",
       "age": 20
     }
   ]

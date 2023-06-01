@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SubjectpageComponent } from './components/subjectpage/subjectpage.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ResultTestComponent } from './components/result-test/result-test.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { ResultTestComponent } from './components/result-test/result-test.compon
     RegisterComponent,
     ResultTestComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

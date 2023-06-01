@@ -1,21 +1,20 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent {
+  constructor(private _authService: AuthService) {}
   public user = {
     name: '',
     email: '',
     password: '',
     confirmPassword: '',
-    age: 0
+    age: 0,
   };
 
-  registerUser() {
-    // Perform registration logic here
-    console.log(this.user);
-  }
+  registerUser() {}
 }
