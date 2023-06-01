@@ -18,6 +18,7 @@
         }
       ]
     },
+
     {
       "id": 2,
       "name": "Science",
@@ -42,42 +43,19 @@
     {
       "id": 1,
       "role": "Admin",
-      "data": [
-        {
-          "id": 1,
-          "name": "Ahmad",
-          "email": "ahmad@admin.com",
-          "password": "12345",
-          "age": 30
-        }
-      ]
+      "name": "Ahmad",
+      "email": "ahmad@admin.com",
+      "password": "12345",
+      "age": 30
     },
+
     {
       "id": 2,
       "role": "normal",
-      "data": [
-        {
-          "id": 1,
-          "name": "John Doe",
-          "email": "johndoe@example.com",
-          "password": "12345",
-          "age": 30
-        },
-        {
-          "id": 2,
-          "name": "Jane Smith",
-          "email": "janesmith@example.com",
-          "password": "12345",
-          "age": 25
-        },
-        {
-          "id": 3,
-          "name": "Bob Johnson",
-          "email": "bobjohnson@example.com",
-          "password": "12345",
-          "age": 45
-        }
-      ]
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "password": "12345",
+      "age": 20
     }
   ]
 }
