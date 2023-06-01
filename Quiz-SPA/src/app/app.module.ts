@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,6 +9,8 @@ import { LoginComponent } from './components/login/login.component';
 import { SubjectpageComponent } from './components/subjectpage/subjectpage.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ResultTestComponent } from './components/result-test/result-test.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +21,14 @@ import { ResultTestComponent } from './components/result-test/result-test.compon
     ResultTestComponent,
     FooterComponent,
     NavbarComponent,
-    AboutusComponent,
-    ContactComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
