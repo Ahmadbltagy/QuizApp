@@ -1,92 +1,92 @@
-.txt{
-    background-color:#146C94 ;
-    border-radius: 50px;
-    color:#F6F1F1;
-    padding: 10px;
+.txt {
+  background-color: #146c94;
+  border-radius: 50px;
+  color: #f6f1f1;
+  padding: 10px;
 }
 
-.instruction{   
-color: #F6F1F1;   
-background-color:#146C94 ; 
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-border-radius: 10px;
+.instruction {
+  color: #f6f1f1;
+  background-color: #146c94;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 10px;
 }
-.instruction h3{
-    color:#F6F1F1
+.instruction h3 {
+  color: #f6f1f1;
 }
-.instruction ul{
-    list-style:decimal
+.instruction ul {
+  list-style: decimal;
 }
 
 .card {
-    border: none;
+  border: none;
 }
 .face {
-    height: 200px;
-    width: 400px;
-    transition: 0.4s;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-
+  height: 200px;
+  width: 400px;
+  transition: 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 .face.front {
-    border-radius: 10px;
-    display: flex;
-    background-image: url("/assets/images/subject.png");
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    z-index: 2;
-    transform: translateY(100px);
+  border-radius: 10px;
+  display: flex;
+  background-image: url("/assets/images/subject.png");
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  z-index: 2;
+  transform: translateY(100px);
 }
 .card:hover .face.front {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 .face.front .content {
-    width: 100%;
-    height: 100%;
-    transition: 0.5s;
-    text-align: center;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  text-align: center;
 }
 .face.front .content h1 {
-    color: #146C94;
-    font-weight: bold;
-    text-align: center;
+  color: #146c94;
+  font-weight: bold;
+  text-align: center;
 }
 .face.back {
-    border-radius: 10px;
-    background-color:#146C94;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    box-sizing: border-box;
-    transform: translateY(-100px);
+  border-radius: 10px;
+  background-color: #146c94;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transform: translateY(-100px);
 }
 .card:hover .face.back {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 .face.back .content p,
 button {
-    margin: 0;
-    padding: 0;
-    color: #F6F1F1;
+  margin: 0;
+  padding: 0;
+  color: #f6f1f1;
 }
-h4,h6{
-    color:#F6F1F1;
+h4,
+h6 {
+  color: #f6f1f1;
 }
 .face.back .content button {
-    color: #146C94;
-    border: 1px solid #F6F1F1;
-    padding: 10px;
-    margin: 15px 0 0;
-    transition: all 0.3s;
-    cursor: pointer;
-    font-weight: bold;
-    background-color: #F6F1F1;
-    border-radius: 6px;
+  color: #146c94;
+  border: 1px solid #f6f1f1;
+  padding: 10px;
+  margin: 15px 0 0;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #f6f1f1;
+  border-radius: 6px;
 }
 .card .face.back .content button:hover {
-    letter-spacing: 1px;
-    background-color: #AFD3E2;
+  letter-spacing: 1px;
+  background-color: #afd3e2;
 }
