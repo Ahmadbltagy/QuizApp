@@ -1,1 +1,33 @@
-<p>login works!</p>
+<!-- login.component.html -->
+
+<div class="container mt-5 d-flex justify-content-center">
+  <div class="card col-md-6" style="background-color: #146C94;">
+    <div class="card-body">
+      <h2 class="card-title" style="color: #F6F1F1;">Login</h2>
+
+      <form (ngSubmit)="loginUser()" #loginForm="ngForm">
+        <div class="form-group">
+          <label for="email" style="color: #F6F1F1;">Email:</label>
+          <input type="email" id="email" name="email" [(ngModel)]="user.email" required email class="form-control"
+            [ngClass]="{ 'is-invalid': loginForm.controls['email']?.invalid && loginForm.controls['email']?.touched }"
+            style="background-color: #F6F1F1;">
+          <div *ngIf="loginForm.controls['email']?.invalid && loginForm.controls['email']?.touched"
+            class="invalid-feedback">Please enter a valid email address.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="password" style="color: #F6F1F1;">Password:</label>
+          <input type="password" id="password" name="password" [(ngModel)]="user.password" required minlength="6"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': loginForm.controls['password']?.invalid && loginForm.controls['password']?.touched }"
+            style="background-color: #F6F1F1;">
+          <div *ngIf="loginForm.controls['password']?.invalid && loginForm.controls['password']?.touched"
+            class="invalid-feedback">Password is required and must be at least 6 characters.</div>
+        </div>
+
+        <button type="submit" [disabled]="!loginForm.form.valid" class="btn btn-primary mt-3"
+          style="background-color: #F6F1F1; color: #146C94;">Login</button>
+      </form>
+    </div>
+  </div>
+</div>
