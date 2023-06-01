@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { SubjectpageComponent } from './components/subjectpage/subjectpage.component';
 import { RegisterComponent } from './components/register/register.component';
-import { ResultTestComponent } from './result-test/result-test.component';
+import { ResultTestComponent } from './components/result-test/result-test.component';
 
 @NgModule({
   declarations: [
