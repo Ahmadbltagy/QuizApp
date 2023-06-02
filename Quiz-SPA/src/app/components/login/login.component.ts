@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -7,13 +8,20 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  constructor(private _authService: AuthService) {}
+  constructor(private _authService: AuthService, private router: Router) {}
   model = {
     email: '',
     password: '',
   };
 
   loginUser() {
-    this._authService.loggedIn(this.model);
+    if(this._authService.loggedIn(this.model)){
+      this.router.navigate(['/'])
+
+
+    }else{
+      console.log("Error");
+    }
+
   }
 }

@@ -23,8 +23,12 @@ export class AuthService {
     if (this.validEmail) {
       localStorage.setItem('loggedIn', 'true');
       localStorage.setItem('role', this.validEmail.role);
+      localStorage.setItem('name', this.validEmail.name);
+      return true;
     } else {
       localStorage.setItem('loggedIn', 'false');
+      return false;
     }
+
   }
 }
