@@ -11,11 +11,9 @@
                     <a class="nav-link" aria-current="page" >Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" >Add Exams</a>
+                    <a class="nav-link" [routerLink]="isAdmin ? '/addexam' : '/takeexam'" >{{isAdmin  ? "Add Exam" : "Take Exam"}}</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" >Your Exams</a>
-                </li>
+             
                 <li class="nav-item">
                     <a class="nav-link" >About Us</a>
                 </li>
