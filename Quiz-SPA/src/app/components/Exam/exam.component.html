@@ -21,7 +21,7 @@
 
   <div class="question-palette col-sm-12 col-md-4 p-0">
     <h6 class="palette-text  mb-0 p-3 fs-5">Question Palette</h6>
-    <div class="questions-numbers row p-2 ps-4  w-100 mx-auto row-cols-5 column-gap-4  row-gap-3 align-content-start">
+    <div class="questions-numbers row p-2 ps-4  w-100 mx-auto row-cols-5 column-gap-4 row-gap-3 align-content-start">
       <p *ngFor="let option of this.questions; let i = index" (click)="selectedQuestion(i)"
         [ngClass]="{'answered': this.questionsColors[i] == 2,
                     'not-answered': this.questionsColors[i] == 3,
@@ -30,7 +30,7 @@
         rounded-circle m-0 not-viewed">{{i+1}}</p>
 
     </div>
-    <h6 class="palette-text mb-0 p-3 fs-5">Legend</h6>
+    <h6 class="palette-text  mb-0 p-3 fs-5">Legend</h6>
     <div class="questions-numbers p-4">
       <div class="q-color-info mb-1">
         <p class="d-inline-block leg rounded-circle m-0 answered" attr-text="Answered"></p>

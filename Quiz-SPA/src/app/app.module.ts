@@ -12,7 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ExameditComponent } from './components/examedit/examedit.component';
 import { AdminpageComponent } from './components/adminpage/adminpage.component';
-
+import { ExamComponent } from './components/Exam/exam.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +24,7 @@ import { AdminpageComponent } from './components/adminpage/adminpage.component';
     NavbarComponent,
     ExameditComponent,
     AdminpageComponent,
+    ExamComponent,
   ],
   imports: [
     BrowserModule,

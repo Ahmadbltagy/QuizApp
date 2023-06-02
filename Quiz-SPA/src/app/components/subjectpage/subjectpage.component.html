@@ -7,10 +7,10 @@
 
 <div class="container my-5 p-5">
   <div class="row">
-    <div *ngFor="let x of subjects" class="card col-4">
+    <div *ngFor="let subject of subjects" class="card col-4">
       <div class="face front">
         <div class="content text-center row align-items-center">
-          <h1>{{ x.name }}</h1>
+          <h1>{{ subject.name }}</h1>
         </div>
       </div>
       <div class="face back">
@@ -20,7 +20,7 @@
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab
           </p>
-          <button>Go to the Test</button>
+          <button [routerLink]="['/subjects',subject.id]">Go to the Test</button>
         </div>
       </div>
     </div>

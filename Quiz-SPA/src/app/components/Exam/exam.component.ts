@@ -1,6 +1,7 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { QuestionService } from '../../services/question.service';
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-exam',
@@ -15,17 +16,18 @@ export class ExamComponent implements OnInit {
   questionIndex: number = 0
   studentAnswers: any = new Map<number, [number,boolean]>()
   answersIsSelected: boolean [] = []
-
+  examGrade: number = 0
   // Color Values [0 Not Viewed, 1 In Progress, 2 Answered, 3 Not Answered]
   questionsColors: number [] = []
 
   constructor(
     private service: QuestionService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router:Router
   ) {}
 
   ngOnInit(): void {
-    //this.id = Number(this.route.snapshot.paramMap.get("id"));
+    this.examId = Number(this.route.snapshot.paramMap.get("subjectId"));
     this.service.GetExam(this.examId).subscribe({
       next: (response) => {
         this.exam = response;
@@ -49,6 +51,22 @@ export class ExamComponent implements OnInit {
       this.questionIndex++
       this.setColors(false)
       this.setSelectedAnswer()
+    }else{
+      Swal.fire({
+        title: 'Are you sure you want to finish the exam?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.calcExamGrade()
+          console.log(this.examGrade)
+          this.router.navigate([`/subjects/${this.examId}/result/${this.examGrade}`])
+        }
+      })
     }
   }
 
@@ -102,6 +120,17 @@ export class ExamComponent implements OnInit {
         this.questionsColors[this.questionIndex] = 1;
       }
     }
+  }
+
+  calcExamGrade(){
+    let answersGrade = 0
+    this.studentAnswers.forEach((value: [number, boolean], key: number) => {
+      console.log(`key: ${key} , value: ${value}`)
+      if(value[1]){
+        answersGrade++
+      }
+    });
+    this.examGrade = (answersGrade/this.questions.length) * 100
   }
 
 }

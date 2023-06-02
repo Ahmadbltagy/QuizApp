@@ -81,6 +81,7 @@
   background-color: #eee;
   height: 250px;
   overflow-y: auto;
+  gap: 10px;
 }
 
 .q-num, .leg{
