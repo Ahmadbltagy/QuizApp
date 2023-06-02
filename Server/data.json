@@ -8,130 +8,264 @@
           "id": 1,
           "text": "What is the result of 2 + 2?",
           "options": [
-            ["2", false],
-            ["3", false],
-            ["4", true],
-            ["5", false]
+            [
+              "2",
+              false
+            ],
+            [
+              "3",
+              false
+            ],
+            [
+              "4",
+              true
+            ],
+            [
+              "5",
+              false
+            ]
           ]
         },
         {
           "id": 2,
           "text": "What is the value of pi (to 2 decimal places)?",
           "options": [
-            ["3.14", true],
-            ["3.141", false],
-            ["3.1415", false],
-            ["3.14159", false]
+            [
+              "3.14",
+              true
+            ],
+            [
+              "3.141",
+              false
+            ],
+            [
+              "3.1415",
+              false
+            ],
+            [
+              "3.14159",
+              false
+            ]
           ]
-        }
-        ,
+        },
         {
           "id": 2,
           "text": "What is the value of pi (to 2 decimal places)?",
           "options": [
-            ["3.14", true],
-            ["3.141", false],
-            ["3.1415", false],
-            ["3.14159", false]
+            [
+              "3.14",
+              true
+            ],
+            [
+              "3.141",
+              false
+            ],
+            [
+              "3.1415",
+              false
+            ],
+            [
+              "3.14159",
+              false
+            ]
           ]
-        }
-        ,
+        },
         {
           "id": 2,
           "text": "What is the value of pi (to 2 decimal places)?",
           "options": [
-            ["3.14", true],
-            ["3.141", false],
-            ["3.1415", false],
-            ["3.14159", false]
+            [
+              "3.14",
+              true
+            ],
+            [
+              "3.141",
+              false
+            ],
+            [
+              "3.1415",
+              false
+            ],
+            [
+              "3.14159",
+              false
+            ]
           ]
-        }
-        ,
+        },
         {
           "id": 2,
           "text": "What is the value of pi (to 2 decimal places)?",
           "options": [
-            ["3.14", true],
-            ["3.141", false],
-            ["3.1415", false],
-            ["3.14159", false]
+            [
+              "3.14",
+              true
+            ],
+            [
+              "3.141",
+              false
+            ],
+            [
+              "3.1415",
+              false
+            ],
+            [
+              "3.14159",
+              false
+            ]
           ]
-        }
-        ,
+        },
         {
           "id": 2,
           "text": "What is the value of pi (to 2 decimal places)?",
           "options": [
-            ["3.14", true],
-            ["3.141", false],
-            ["3.1415", false],
-            ["3.14159", false]
+            [
+              "3.14",
+              true
+            ],
+            [
+              "3.141",
+              false
+            ],
+            [
+              "3.1415",
+              false
+            ],
+            [
+              "3.14159",
+              false
+            ]
           ]
-        }
-        ,
+        },
         {
           "id": 2,
           "text": "What is the value of pi (to 2 decimal places)?",
           "options": [
-            ["3.14", true],
-            ["3.141", false],
-            ["3.1415", false],
-            ["3.14159", false]
+            [
+              "3.14",
+              true
+            ],
+            [
+              "3.141",
+              false
+            ],
+            [
+              "3.1415",
+              false
+            ],
+            [
+              "3.14159",
+              false
+            ]
           ]
-        }
-        ,
+        },
         {
           "id": 2,
           "text": "What is the value of pi (to 2 decimal places)?",
           "options": [
-            ["3.14", true],
-            ["3.141", false],
-            ["3.1415", false],
-            ["3.14159", false]
+            [
+              "3.14",
+              true
+            ],
+            [
+              "3.141",
+              false
+            ],
+            [
+              "3.1415",
+              false
+            ],
+            [
+              "3.14159",
+              false
+            ]
           ]
-        }
-        ,
+        },
         {
           "id": 2,
           "text": "What is the value of pi (to 2 decimal places)?",
           "options": [
-            ["3.14", true],
-            ["3.141", false],
-            ["3.1415", false],
-            ["3.14159", false]
+            [
+              "3.14",
+              true
+            ],
+            [
+              "3.141",
+              false
+            ],
+            [
+              "3.1415",
+              false
+            ],
+            [
+              "3.14159",
+              false
+            ]
           ]
-        }
-        ,
+        },
         {
           "id": 2,
           "text": "What is the value of pi (to 2 decimal places)?",
           "options": [
-            ["3.14", true],
-            ["3.141", false],
-            ["3.1415", false],
-            ["3.14159", false]
+            [
+              "3.14",
+              true
+            ],
+            [
+              "3.141",
+              false
+            ],
+            [
+              "3.1415",
+              false
+            ],
+            [
+              "3.14159",
+              false
+            ]
           ]
-        }
-        ,
+        },
         {
           "id": 2,
           "text": "What is the value of pi (to 2 decimal places)?",
           "options": [
-            ["3.14", true],
-            ["3.141", false],
-            ["3.1415", false],
-            ["3.14159", false]
+            [
+              "3.14",
+              true
+            ],
+            [
+              "3.141",
+              false
+            ],
+            [
+              "3.1415",
+              false
+            ],
+            [
+              "3.14159",
+              false
+            ]
           ]
-        }
-        ,
+        },
         {
           "id": 2,
           "text": "What is the value of pi (to 2 decimal places)?",
           "options": [
-            ["3.14", true],
-            ["3.141", false],
-            ["3.1415", false],
-            ["3.14159", false]
+            [
+              "3.14",
+              true
+            ],
+            [
+              "3.141",
+              false
+            ],
+            [
+              "3.1415",
+              false
+            ],
+            [
+              "3.14159",
+              false
+            ]
           ]
         }
       ]
@@ -144,26 +278,49 @@
           "id": 1,
           "text": "What is the atomic number of oxygen?",
           "options": [
-            ["6", false],
-            ["7", false],
-            ["8", true],
-            ["9", false]
+            [
+              "6",
+              false
+            ],
+            [
+              "7",
+              false
+            ],
+            [
+              "8",
+              true
+            ],
+            [
+              "9",
+              false
+            ]
           ]
         },
         {
           "id": 2,
           "text": "What is the largest planet in our solar system?",
           "options": [
-            ["Jupiter", true],
-            ["Saturn", false],
-            ["Uranus", false],
-            ["Neptune", false]
+            [
+              "Jupiter",
+              true
+            ],
+            [
+              "Saturn",
+              false
+            ],
+            [
+              "Uranus",
+              false
+            ],
+            [
+              "Neptune",
+              false
+            ]
           ]
         }
       ]
     }
   ],
-
   "users": [
     {
       "id": 1,
@@ -173,7 +330,6 @@
       "password": "123456",
       "age": 30
     },
-
     {
       "id": 2,
       "role": "normal",
@@ -181,6 +337,49 @@
       "email": "johndoe@example.com",
       "password": "123456",
       "age": 20
+    },
+    {
+      "name": "badr",
+      "email": "b@b",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "age": "25",
+      "id": 3
+    },
+    {
+      "name": "badr",
+      "email": "badr@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "age": "25",
+      "id": 4
+    },
+    {
+      "name": "badr",
+      "email": "badr@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "age": "25",
+      "role": "normal",
+      "id": 5
+    },
+    {
+      "name": "ahmed",
+      "email": "hamada@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "age": "25",
+      "role": "normal",
+      "id": 6
+    },
+    {
+      "name": "amrs",
+      "email": "amr@gmail.com",
+      "password": "123456",
+      "confirmPassword": "132456",
+      "age": "26",
+      "role": "normal",
+      "id": 7
     }
   ]
 }
