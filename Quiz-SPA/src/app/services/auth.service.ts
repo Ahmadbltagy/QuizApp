@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -32,6 +33,19 @@ export class AuthService {
       localStorage.setItem('loggedIn', 'false');
       return false;
     }
-
   }
+
+  register(registerModel:any): Observable<any>{
+    // let reg = registerModel.controls;
+    // let newModel: any= {
+    //   "role": "normal",
+    //   "name": reg.name,
+    //   "email": reg.email,
+    //   "password": reg.passwoed,
+    //   "age": reg.age
+    // }
+    return this._http.post(`${this.baseUrl}users`, registerModel);
+  }
+
+
 }

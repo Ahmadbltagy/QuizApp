@@ -30,7 +30,12 @@ export class NavbarComponent implements OnInit {
     // setRole(localStorage.getItem("role"));
     // getRole();
 
-
-    
+  }
+  signOut(){
+      localStorage.removeItem("name");
+      localStorage.removeItem("loggedIn");
+      localStorage.removeItem("role");
+      this.role= null;
+      this.loggedin = false;
   }
 }
