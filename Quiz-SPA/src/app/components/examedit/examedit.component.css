@@ -1,0 +1,58 @@
+.sub{
+    background-color: #146C94;
+    color: #F6F1F1;
+    text-align: center;
+    padding: 20px;
+}
+.edit{
+    color: #146C94;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #146C94;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  /* input[type="text"]{
+    text-align: center;
+    margin: 10px;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F6F1F1;
+    color: #146C94;
+    margin-bottom: 20px;
+  } */
+
+.question-card {
+    margin: 10px 20px;
+    padding: 20px;
+    border: 1px solid #146C94;
+    border-radius: 5px;
+  }
+
+  .question-card label {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .question-card textarea {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .question-card button {
+    padding: 5px 10px;
+    background-color: #19A7CE;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
