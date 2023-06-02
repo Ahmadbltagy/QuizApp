@@ -20,8 +20,8 @@ export class ExameditComponent implements OnInit {
   }
 
   questionForm=new FormGroup({
-    questionText:new FormControl("",[Validators.required]),
-    questionInput:new FormControl("",Validators.required)
+    questionText:new FormControl(""),
+    questionInput:new FormControl("")
   })
 
 }
