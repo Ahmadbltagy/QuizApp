@@ -18,5 +18,6 @@ export class NavbarComponent implements OnInit {
     this.userId = Number(this.route.snapshot.paramMap.get("userId"));
     this.userService.getUserById(this.userId).subscribe((response)=> this.user = response);
     this.isAdmin = this.user.role.toLower() === "admin";
+    
   }
 }

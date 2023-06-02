@@ -9,16 +9,22 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { ResultTestComponent } from './components/result-test/result-test.component';
 import { SubjectpageComponent } from './components/subjectpage/subjectpage.component';
 import { ExamComponent } from './components/Exam/exam.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'about', component: AboutusComponent },
+  { path: 'aboutus', component: AboutusComponent },
   { path: 'subjects/:subjectId/result/:grade', component: ResultTestComponent },
   { path: 'subjects', component: SubjectpageComponent },
   {path: 'subjects/:subjectId', component: ExamComponent},
   { path: 'admin', component: AdminpageComponent },
   { path: 'admin/:id/edit', component: ExameditComponent },
+  { path: 'contactus', component: ContactComponent },
+  { path: '', component: HomeComponent },
+
+  
 ];
 
 @NgModule({

@@ -1,13 +1,13 @@
 <div class="text-center m-5 txt">
   <h3>
-    <i class="bi bi-quote"></i>With patience and perseverance, you can conquer
+    <i class="bi bi-quote" style="text-transform: uppercase;"></i>With patience and perseverance, you can conquer
     any challenge and achieve your dreams.<i class="bi bi-quote rotate-90"></i>
   </h3>
 </div>
 
-<div class="container my-5 p-5">
+<div class="container">
   <div class="row">
-    <div *ngFor="let subject of subjects" class="card col-4">
+    <div *ngFor="let subject of subjects" class="card col-4 mx-5">
       <div class="face front">
         <div class="content text-center row align-items-center">
           <h1>{{ subject.name }}</h1>
@@ -18,7 +18,7 @@
           <h4>Duration: 40 min</h4>
           <h6>Full Grade: 100 <br />MinGrade: 50</h6>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab
+            Take Exam To Test You Knowladge
           </p>
           <button [routerLink]="['/subjects',subject.id]">Go to the Test</button>
         </div>
@@ -27,7 +27,7 @@
   </div>
 </div>
 
-<div class="container instruction my-5 p-3">
+<div class="container instruction my-1 p-3">
   <h3>Instructions:</h3>
   <ul>
     <li>Number of questions: <b>50</b></li>

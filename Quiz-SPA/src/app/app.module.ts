@@ -13,6 +13,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ExameditComponent } from './components/examedit/examedit.component';
 import { AdminpageComponent } from './components/adminpage/adminpage.component';
 import { ExamComponent } from './components/Exam/exam.component';
+import { HomeComponent } from './components/home/home.component';
+import { ContactComponent } from './components/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,8 @@ import { ExamComponent } from './components/Exam/exam.component';
     ExameditComponent,
     AdminpageComponent,
     ExamComponent,
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +36,7 @@ import { ExamComponent } from './components/Exam/exam.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
