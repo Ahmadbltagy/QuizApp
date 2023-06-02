@@ -1,3 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-@import "../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
+/* @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.min.css"; */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --main-color: #146C94;
+  --secondary-color: #19A7CE;
+  --highlight-color: #AFD3E2;
+  --card-color: #F6F1F1;
+  --background-color: #FFFFFF;
+  --duration: 0.3s;
+}
+
+*{
+  font-family: 'Fira Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: var(--background-color) !important;
+}
+
+.container
+{
+  padding: 0 !important;
+  background-color: var(--background-color);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--highlight-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
