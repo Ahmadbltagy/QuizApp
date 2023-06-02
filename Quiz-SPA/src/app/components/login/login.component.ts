@@ -16,7 +16,7 @@ export class LoginComponent {
 
   loginUser() {
     if(this._authService.loggedIn(this.model)){
-      this.router.navigate(['/'])
+      this.router.navigateByUrl('home').then(()=>window.location.reload())
 
 
     }else{

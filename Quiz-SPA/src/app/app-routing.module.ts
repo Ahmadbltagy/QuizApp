@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'admin', component: AdminpageComponent },
   { path: 'admin/:id/edit', component: ExameditComponent },
   { path: 'contactus', component: ContactComponent },
+  { path: 'home', component: HomeComponent },
   { path: '', component: HomeComponent },
 
   

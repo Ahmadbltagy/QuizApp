@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +10,7 @@ export class AuthService {
   baseUrl = 'http://localhost:3005/';
   users: any;
   validEmail: any;
-  constructor(private _http: HttpClient) {
+  constructor(private _http: HttpClient, private router: Router) {
     this._http.get(`${this.baseUrl}users`).subscribe({
       next: (res) => (this.users = res),
       error: (err) => console.log(err),
@@ -24,6 +26,7 @@ export class AuthService {
       localStorage.setItem('loggedIn', 'true');
       localStorage.setItem('role', this.validEmail.role);
       localStorage.setItem('name', this.validEmail.name);
+
       return true;
     } else {
       localStorage.setItem('loggedIn', 'false');
