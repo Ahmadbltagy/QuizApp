@@ -15,4 +15,8 @@ export class SubjectService {
   byId(id: number) {
     return this._http.get(`${this.baseUrl}Subjects/${id}`);
   }
+
+  editByid(id: number, question: any) {
+    return this._http.put(`${this.baseUrl}Subjects/${id}`, question);
+  }
 }

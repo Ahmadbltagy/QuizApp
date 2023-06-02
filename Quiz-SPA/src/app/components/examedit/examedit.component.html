@@ -1,0 +1,47 @@
+<div>
+  <h2 class="sub">Subject Name:{{ subject?.name }}</h2>
+</div>
+
+<h2 class="edit">Edit Questions:</h2>
+
+<div *ngFor="let x of subject?.questions; let i = index" class="question-card">
+  <form #questionForm="ngForm" (submit)="EditQuestoin($event)">
+    <label for="question-1">Question:{{ i + 1 }}</label>
+    <input
+      type="text"
+      name="questionText"
+      [(ngModel)]="x.text"
+      questionText="ngModel"
+      class="form-control col-5"
+      aria-label="Small"
+      aria-describedby="inputGroup-sizing-sm"
+    />
+    <label>Options:</label>
+    <div class="row input-group input-group-sm mb-3">
+      <ng-container *ngFor="let y of x.options">
+        <input
+          type="text"
+          name="options"
+          options="ngModel"
+          [value]="y"
+          class="form-control mx-2 col-3"
+          aria-label="Small"
+          aria-describedby="inputGroup-sizing-sm"
+        />
+      </ng-container>
+    </div>
+    <!-- <div  class="row input-group input-group-sm mb-3">
+      <input *ngFor="let y of x.options" type="text" [value]="y[i]" class="form-control mx-2 col-3" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+    </div> -->
+
+    <!-- <label >Answer:</label>
+    <div  class="row input-group input-group-sm mb-3">
+      <input type="text" [value]="x.answer" class="form-control mx-2 col-3" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+    </div> -->
+
+    <div style="width: 50%" class="row">
+      <!-- <button class="col m-1" type="button">Delete Question</button> -->
+      <button class="col m-1" type="submit">Edit Question</button>
+    </div>
+  </form>
+</div>
