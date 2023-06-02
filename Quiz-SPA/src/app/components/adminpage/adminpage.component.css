@@ -1,0 +1,20 @@
+.uppertxt{
+    margin: 20px;
+    padding: 10px;
+    background-color: #146C94;
+    color:#F6F1F1;
+    text-align: center;
+    font-size: 40px;
+}
+table{
+    border-block: 2px solid #146C94;
+    background-color: #F6F1F1;
+    color: #146C94;
+}
+
+button{
+    background-color: #146C94;
+    color: #F6F1F1;
+    border: none;
+    cursor: pointer;
+}

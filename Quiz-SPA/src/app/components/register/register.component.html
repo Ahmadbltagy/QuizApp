@@ -1,61 +1,159 @@
 <!-- registration.component.html -->
 <div class="container mt-5 d-flex justify-content-center">
-  <div class="card col-md-6" style="background-color: #146C94;">
+  <div class="card col-md-6" style="background-color: #146c94">
     <div class="card-body">
       <h2 class="card-title text-white text-center">Registration</h2>
 
       <form (ngSubmit)="registerUser()" #registrationForm="ngForm">
         <div class="form-group">
           <label for="name" class="text-white">Name:</label>
-          <input type="text" id="name" name="name" [(ngModel)]="user.name" required minlength="3" maxlength="30"
+          <input
+            type="text"
+            id="name"
+            name="name"
+            [(ngModel)]="user.name"
+            required
+            minlength="3"
+            maxlength="30"
             class="form-control"
-            [ngClass]="{ 'is-invalid': registrationForm.controls['name']?.invalid && registrationForm.controls['name']?.touched }"
-            style="background-color: #F6F1F1;">
-          <div *ngIf="registrationForm.controls['name']?.invalid && registrationForm.controls['name']?.touched"
-            class="invalid-feedback text-danger">Name is required and must be between 3 and 30 characters.</div>
+            [ngClass]="{
+              'is-invalid':
+                registrationForm.controls['name'].invalid &&
+                registrationForm.controls['name'].touched
+            }"
+            style="background-color: #f6f1f1"
+          />
+          <div
+            *ngIf="
+              registrationForm.controls['name'].invalid &&
+              registrationForm.controls['name'].touched
+            "
+            class="invalid-feedback text-danger"
+          >
+            Name is required and must be between 3 and 30 characters.
+          </div>
         </div>
 
         <div class="form-group">
           <label for="name" class="text-white">Email:</label>
-          <input type="email" id="email" name="email" [(ngModel)]="user.email" required email class="form-control"
-            [ngClass]="{ 'is-invalid': registrationForm.controls['email']?.invalid && registrationForm.controls['email']?.touched }"
-            style="background-color: #F6F1F1;">
-          <div *ngIf="registrationForm.controls['email']?.invalid && registrationForm.controls['email']?.touched"
-            class="invalid-feedback">Please enter a valid email address.</div>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            [(ngModel)]="user.email"
+            required
+            email
+            class="form-control"
+            [ngClass]="{
+              'is-invalid':
+                registrationForm.controls['email'].invalid &&
+                registrationForm.controls['email'].touched
+            }"
+            style="background-color: #f6f1f1"
+          />
+          <div
+            *ngIf="
+              registrationForm.controls['email'].invalid &&
+              registrationForm.controls['email'].touched
+            "
+            class="invalid-feedback"
+          >
+            Please enter a valid email address.
+          </div>
         </div>
 
         <div class="form-group">
           <label for="name" class="text-white">Password:</label>
-          <input type="password" id="password" name="password" [(ngModel)]="user.password" required minlength="6"
+          <input
+            type="password"
+            id="password"
+            name="password"
+            [(ngModel)]="user.password"
+            required
+            minlength="6"
             class="form-control"
-            [ngClass]="{ 'is-invalid': registrationForm.controls['password']?.invalid && registrationForm.controls['password']?.touched }"
-            style="background-color: #F6F1F1;">
-          <div *ngIf="registrationForm.controls['password']?.invalid && registrationForm.controls['password']?.touched"
-            class="invalid-feedback">Password is required and must be at least 6 characters.</div>
+            [ngClass]="{
+              'is-invalid':
+                registrationForm.controls['password'].invalid &&
+                registrationForm.controls['password'].touched
+            }"
+            style="background-color: #f6f1f1"
+          />
+          <div
+            *ngIf="
+              registrationForm.controls['password'].invalid &&
+              registrationForm.controls['password'].touched
+            "
+            class="invalid-feedback"
+          >
+            Password is required and must be at least 6 characters.
+          </div>
         </div>
 
         <div class="form-group">
           <label for="name" class="text-white">Confirm Password:</label>
-          <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="user.confirmPassword" required
-            minlength="6" class="form-control"
-            [ngClass]="{ 'is-invalid': registrationForm.controls['confirmPassword']?.invalid && registrationForm.controls['confirmPassword']?.touched }"
-            style="background-color: #F6F1F1;">
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            [(ngModel)]="user.confirmPassword"
+            required
+            minlength="6"
+            class="form-control"
+            [ngClass]="{
+              'is-invalid':
+                registrationForm.controls['confirmPassword'].invalid &&
+                registrationForm.controls['confirmPassword'].touched
+            }"
+            style="background-color: #f6f1f1"
+          />
           <div
-            *ngIf="registrationForm.controls['confirmPassword']?.invalid && registrationForm.controls['confirmPassword']?.touched"
-            class="invalid-feedback">Please enter a matching password.</div>
+            *ngIf="
+              registrationForm.controls['confirmPassword'].invalid &&
+              registrationForm.controls['confirmPassword'].touched
+            "
+            class="invalid-feedback"
+          >
+            Please enter a matching password.
+          </div>
         </div>
 
         <div class="form-group">
           <label for="name" class="text-white">Age:</label>
-          <input type="number" id="age" name="age" [(ngModel)]="user.age" required min="18" max="99"
+          <input
+            type="number"
+            id="age"
+            name="age"
+            [(ngModel)]="user.age"
+            required
+            min="18"
+            max="99"
             class="form-control"
-            [ngClass]="{'is-invalid': registrationForm.controls['age']?.invalid && registrationForm.controls['age']?.touched }"
-            style="background-color: #F6F1F1;">
-          <div *ngIf="registrationForm.controls['age']?.invalid && registrationForm.controls['age']?.touched"
-            class="invalid-feedback">Age must be between 18 and 99.</div>
+            [ngClass]="{
+              'is-invalid':
+                registrationForm.controls['age'].invalid &&
+                registrationForm.controls['age'].touched
+            }"
+            style="background-color: #f6f1f1"
+          />
+          <div
+            *ngIf="
+              registrationForm.controls['age'].invalid &&
+              registrationForm.controls['age'].touched
+            "
+            class="invalid-feedback"
+          >
+            Age must be between 18 and 99.
+          </div>
         </div>
 
-        <button type="submit" [disabled]="!registrationForm.form.valid" class="btn btn-primary mt-3">Register</button>
+        <button
+          type="submit"
+          [disabled]="!registrationForm.form.valid"
+          class="btn btn-primary mt-3"
+        >
+          Register
+        </button>
       </form>
     </div>
   </div>

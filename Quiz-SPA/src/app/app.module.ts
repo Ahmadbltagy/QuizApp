@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { SubjectpageComponent } from './components/subjectpage/subjectpage.component';
 import { RegisterComponent } from './components/register/register.component';
-import { ExamComponent } from './components/Exam/exam.component';
+import { ResultTestComponent } from './components/result-test/result-test.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ExameditComponent } from './components/examedit/examedit.component';
+import { AdminpageComponent } from './components/adminpage/adminpage.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +19,20 @@ import { ExamComponent } from './components/Exam/exam.component';
     LoginComponent,
     SubjectpageComponent,
     RegisterComponent,
-    ExamComponent,
+    ResultTestComponent,
+    FooterComponent,
+    NavbarComponent,
+    ExameditComponent,
+    AdminpageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
