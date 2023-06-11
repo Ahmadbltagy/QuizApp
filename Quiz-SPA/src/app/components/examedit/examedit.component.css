@@ -1,23 +1,23 @@
-.sub{
-    background-color: #146C94;
-    color: #F6F1F1;
-    text-align: center;
-    padding: 20px;
+.sub {
+  background-color: #146C94;
+  color: #F6F1F1;
+  text-align: center;
+  padding: 20px;
 }
-.edit{
-    color: #146C94;
-    margin-top: 50px;
-    margin-left: 20px;
-}
-label {
-    display: block;
-    margin-bottom: 10px;
-    color: #146C94;
-    font-size: 18px;
-    font-weight: bold;
-  }
 
-  /* input[type="text"]{
+.edit {
+  color: #146C94;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #146C94;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* input[type="text"]{
     text-align: center;
     margin: 10px;
     width: 100%;
@@ -31,28 +31,61 @@ label {
   } */
 
 .question-card {
-    margin: 10px 20px;
-    padding: 20px;
-    border: 1px solid #146C94;
-    border-radius: 5px;
-  }
+  margin: 10px 20px;
+  padding: 20px;
+  border: 1px solid #146C94;
+  border-radius: 5px;
+}
 
-  .question-card label {
-    font-size: 16px;
-    font-weight: normal;
-  }
+.question-card label {
+  font-size: 16px;
+  font-weight: normal;
+}
 
-  .question-card textarea {
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
+.question-card textarea {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
 
-  .question-card button {
-    padding: 5px 10px;
-    background-color: #19A7CE;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.question-card button {
+  padding: 5px 10px;
+  background-color: #19A7CE;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sub-name input[type="text"] {
+  width: 85%;
+}
+
+.modal {
+  position: fixed;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 600px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.delete-btn
+{
+  top: -5px;
+  right: -5px;
+  cursor: pointer;
+  transition: var(--duration);
+  -webkit-transition: var(--duration);
+  -moz-transition: var(--duration);
+  -ms-transition: var(--duration);
+  -o-transition: var(--duration);
+  font-weight: 800;
+  color: #ccc;
+}
+
+.delete-btn:hover{
+  color: rgb(177, 10, 10);
+}

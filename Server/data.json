@@ -6,7 +6,7 @@
       "questions": [
         {
           "id": 1,
-          "text": "What is the result of 2 + 2?",
+          "text": "what is sum of 2+2 ?",
           "options": [
             [
               "2",
@@ -28,66 +28,22 @@
         },
         {
           "id": 2,
-          "text": "What is the value of pi (to 2 decimal places)?",
+          "text": "What is the area of square with side 4cm ?",
           "options": [
             [
-              "3.14",
+              "12",
+              false
+            ],
+            [
+              "16",
               true
             ],
             [
-              "3.141",
+              "17",
               false
             ],
             [
-              "3.1415",
-              false
-            ],
-            [
-              "3.14159",
-              false
-            ]
-          ]
-        },
-        {
-          "id": 2,
-          "text": "What is the value of pi (to 2 decimal places)?",
-          "options": [
-            [
-              "3.14",
-              true
-            ],
-            [
-              "3.141",
-              false
-            ],
-            [
-              "3.1415",
-              false
-            ],
-            [
-              "3.14159",
-              false
-            ]
-          ]
-        },
-        {
-          "id": 2,
-          "text": "What is the value of pi (to 2 decimal places)?",
-          "options": [
-            [
-              "3.14",
-              true
-            ],
-            [
-              "3.141",
-              false
-            ],
-            [
-              "3.1415",
-              false
-            ],
-            [
-              "3.14159",
+              "20",
               false
             ]
           ]
@@ -319,6 +275,120 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Algorithms",
+      "questions": [
+        {
+          "text": "Which of the following is not O(n2)?",
+          "options": [
+            [
+              "(15) * n^2",
+              false
+            ],
+            [
+              "n^1.98n1.98",
+              false
+            ],
+            [
+              "n^3/(sqrt(n))",
+              true
+            ],
+            [
+              "(20) * n^2",
+              false
+            ]
+          ]
+        },
+        {
+          "text": "Is DFS Graph Algorithm?",
+          "options": [
+            [
+              "False",
+              false
+            ],
+            [
+              "True",
+              true
+            ]
+          ]
+        },
+        {
+          "text": "Which of the following is not a backtracking algorithm?",
+          "options": [
+            [
+              "Knight tour problem",
+              false
+            ],
+            [
+              "N queen problem",
+              false
+            ],
+            [
+              "Tower of hanoi",
+              true
+            ],
+            [
+              "M coloring problem",
+              false
+            ]
+          ]
+        }
+      ],
+      "id": 3
+    },
+    {
+      "name": "History",
+      "questions": [
+        {
+          "text": "When did 1st world war begin?",
+          "options": [
+            [
+              "1914",
+              true
+            ],
+            [
+              "2000",
+              false
+            ],
+            [
+              "1450",
+              false
+            ],
+            [
+              "1870",
+              false
+            ]
+          ]
+        },
+        {
+          "text": "when did 2nd world war begin?",
+          "options": [
+            [
+              "1943",
+              true
+            ],
+            [
+              "1950",
+              false
+            ]
+          ]
+        },
+        {
+          "text": "What is the result of 2 + 3?",
+          "options": [
+            [
+              "4",
+              false
+            ],
+            [
+              "5",
+              true
+            ]
+          ]
+        }
+      ],
+      "id": 7
     }
   ],
   "users": [

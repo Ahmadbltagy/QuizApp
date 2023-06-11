@@ -1,47 +1,92 @@
-<div>
-  <h2 class="sub">Subject Name:{{ subject?.name }}</h2>
+
+
+<!-- Modal -->
+<div class="modal fade modal-dialog modal-dialog-centered" id="exampleModal" tabindex="-1"
+  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label for="question-1">Question</label>
+          <input type="text" name="questionText" [(ngModel)]="newQuestion.text" questionText="ngModel"
+            class="form-control col-5" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+
+          <label class="mt-2">Question Type</label>
+
+          <div class="questiton-type d-flex">
+            <input type="radio" (change)="setNewQuestionOptions(2)" name="q-type" id="type1">
+            <label for="type1" class="ms-1 mt-2 me-4">MCQ 2</label>
+
+            <input type="radio" (change)="setNewQuestionOptions(4)" name="q-type" id="type2">
+            <label for="type2" class="ms-1 mt-2">MCQ 4</label>
+          </div>
+
+          <label class="mt-2">Options:</label>
+          <div class="row input-group input-group-sm mb-3">
+            <ng-container *ngFor="let y of newQuestion.options; let j = index" class="col-4">
+              <input type="text" (input)="changeOptionText(-1,j, $event)" class="form-control mx-2 input-group"
+                aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+
+              <div class="input-group-append d-flex align-items-center">
+                <input type="radio" (change)="changOption(-1,j)" name="answer" class="rounded">
+                <label for="" class="ms-1 mt-2">True</label>
+              </div>
+            </ng-container>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="click()">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>
 
-<h2 class="edit">Edit Questions:</h2>
+<!-- Questions -->
+<h2 class="sub mt-5 container">Subject Name: {{ subject?.name }}</h2>
 
-<div *ngFor="let x of subject?.questions; let i = index" class="question-card">
-  <form #questionForm="ngForm" (submit)="EditQuestoin($event)">
-    <label for="question-1">Question:{{ i + 1 }}</label>
-    <input
-      type="text"
-      name="questionText"
-      [(ngModel)]="x.text"
-      questionText="ngModel"
-      class="form-control col-5"
-      aria-label="Small"
-      aria-describedby="inputGroup-sizing-sm"
-    />
-    <label>Options:</label>
+<div class="d-flex justify-content-between container mt-3">
+  <h2 class="edit p-0">{{subjectId==0?"Add":"Edit"}} Subject</h2>
+  <button *ngIf="this.subjectId!=0" class="m-1 bttn text-light w-25" (click)="editSubject()"><i class="bi bi-pencil-square border-0 me-1"></i>
+    Edit Subject</button>
+    <button *ngIf="this.subjectId==0" class="m-1 bttn text-light w-25" (click)="addSubject()"><i class="bi bi-pencil-square border-0 me-1"></i>
+      Add Subject</button>
+</div>
+
+<div class="sub-name container d-flex flex-wrap mx-auto align-items-center justify-content-between mt-4 mb-3">
+  <label for="">Subject Name</label>
+  <input type="text" [(ngModel)]="subject.name" [value]="subject?.name" class="form-control">
+</div>
+
+<div *ngFor="let x of subject?.questions; let i = index" class="question-card container mx-auto">
+  <form class="position-relative">
+    <a class="position-absolute delete-btn fs-5" (click)="deleteQuestion(i)"><i class="bi bi-x-octagon-fill"></i></a>
+    <label for="question-1">Question: {{ i + 1 }}</label>
+    <input type="text" name="questionText" [(ngModel)]="subject.questions[i].text" [value]="x.text"
+      questionText="ngModel" class="form-control col-5" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+    <label class="mt-2">Options:</label>
     <div class="row input-group input-group-sm mb-3">
-      <ng-container *ngFor="let y of x.options">
-        <input
-          type="text"
-          name="options"
-          options="ngModel"
-          [value]="y"
-          class="form-control mx-2 col-3"
-          aria-label="Small"
-          aria-describedby="inputGroup-sizing-sm"
-        />
+      <ng-container *ngFor="let y of x.options; let j = index" class="row col-4">
+        <input type="text" (input)="changeOptionText(i,j, $event)" [value]="y[0]"
+          class="form-control mx-2 col input-group" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+
+        <div class="col input-group-append d-flex align-items-center">
+          <input (change)="changOption(i,j)" [checked]="y[1]" type="radio" name="answer" class="rounded">
+          <label for="" class="ms-1 mt-2">True</label>
+        </div>
       </ng-container>
-    </div>
-    <!-- <div  class="row input-group input-group-sm mb-3">
-      <input *ngFor="let y of x.options" type="text" [value]="y[i]" class="form-control mx-2 col-3" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-    </div> -->
-
-    <!-- <label >Answer:</label>
-    <div  class="row input-group input-group-sm mb-3">
-      <input type="text" [value]="x.answer" class="form-control mx-2 col-3" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-    </div> -->
-
-    <div style="width: 50%" class="row">
-      <!-- <button class="col m-1" type="button">Delete Question</button> -->
-      <button class="col m-1" type="submit">Edit Question</button>
     </div>
   </form>
 </div>
+<div class="container mx-auto d-flex justify-content-end my-5">
+  <button type="button" class="bttn text-light w-25" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <i class="bi bi-stars me-1"></i> Add New Question
+  </button>
+</div>
+
+<!-- Button trigger modal -->

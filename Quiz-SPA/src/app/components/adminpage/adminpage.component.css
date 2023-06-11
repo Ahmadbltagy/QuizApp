@@ -12,6 +12,10 @@ table{
     color: #146C94;
 }
 
+i{
+  cursor: pointer;
+}
+
 button{
     background-color: #146C94;
     color: #F6F1F1;

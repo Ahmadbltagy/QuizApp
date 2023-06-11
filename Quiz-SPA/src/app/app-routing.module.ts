@@ -20,12 +20,12 @@ const routes: Routes = [
   { path: 'subjects', component: SubjectpageComponent },
   {path: 'subjects/:subjectId', component: ExamComponent},
   { path: 'admin', component: AdminpageComponent },
-  { path: 'admin/:id/edit', component: ExameditComponent },
+  { path: 'admin/edit/:id', component: ExameditComponent },
   { path: 'contactus', component: ContactComponent },
   { path: 'home', component: HomeComponent },
   { path: '', component: HomeComponent },
 
-  
+
 ];
 
 @NgModule({

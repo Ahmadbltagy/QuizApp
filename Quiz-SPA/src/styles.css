@@ -47,3 +47,23 @@ body{
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+
+.bttn{
+  background-color: var(--main-color);
+  text-decoration: none;
+  text-align: center;
+  width: 100px;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  transition: var(--duration);
+  -webkit-transition: var(--duration);
+  -moz-transition: var(--duration);
+  -ms-transition: var(--duration);
+  -o-transition: var(--duration);
+  border:none
+}
+
+.bttn:hover{
+  background-color: #0f597b;
+}

@@ -1,20 +1,20 @@
 <div class="container row mx-auto mb-3 p-0 justify-content-between">
-  <h2 class="exam-title p-3 mx-auto text-center text-light m-0">{{this.exam.name}} Exam</h2>
+  <h2 class="exam-title p-3 mx-auto text-center text-light m-0">{{exam?.name}} Exam</h2>
 
   <div class="question-section mb-3 col-sm-12 col-md-7 p-0 d-flex flex-column justify-content-between">
     <div class="card rounded-3 mb-3">
-      <h5 class="question-title text-light mb-0">{{this.questionIndex+1}}. {{this.questions[this.questionIndex].text}}
+      <h5 class="question-title text-light mb-0">{{questionIndex+1}}. {{questions[questionIndex].text}}
       </h5>
 
-      <h6 *ngFor="let option of this.questions[this.questionIndex].options; let answerIndex = index"
+      <h6 *ngFor="let option of questions[questionIndex]?.options; let answerIndex = index"
         (click)="selectAnswer(answerIndex)" [ngClass]="{'select': answersIsSelected[answerIndex] == true,
         'unselect': answersIsSelected[answerIndex] == false}" class="answer mb-0 ps-3">{{option[0]}}</h6>
 
     </div>
     <div class="transact-btns d-flex justify-content-between">
-      <a *ngIf="this.questionIndex != 0" class="bttn text-light" (click)="previousQuestion()"><i
+      <a *ngIf="questionIndex != 0" class="bttn text-light" (click)="previousQuestion()"><i
           class="bi bi-caret-left-fill"></i> Previous</a>
-      <a class="bttn text-light ms-auto" (click)="nextQuestion()">{{this.questionIndex == this.questions.length -1?
+      <a class="bttn text-light ms-auto" (click)="nextQuestion()">{{questionIndex == questions.length -1?
         "Submit" : "Next" }} <i class="bi bi-caret-right-fill"></i></a>
     </div>
   </div>
@@ -22,10 +22,10 @@
   <div class="question-palette col-sm-12 col-md-4 p-0">
     <h6 class="palette-text  mb-0 p-3 fs-5">Question Palette</h6>
     <div class="questions-numbers row p-2 ps-4  w-100 mx-auto row-cols-5 column-gap-4 row-gap-3 align-content-start">
-      <p *ngFor="let option of this.questions; let i = index" (click)="selectedQuestion(i)"
-        [ngClass]="{'answered': this.questionsColors[i] == 2,
-                    'not-answered': this.questionsColors[i] == 3,
-                    'in-progress': this.questionsColors[i] == 1}"
+      <p *ngFor="let option of questions; let i = index" (click)="selectedQuestion(i)"
+        [ngClass]="{'answered': questionsColors[i] == 2,
+                    'not-answered': questionsColors[i] == 3,
+                    'in-progress': questionsColors[i] == 1}"
         class=" col d-flex justify-content-center align-items-center q-num
         rounded-circle m-0 not-viewed">{{i+1}}</p>
 

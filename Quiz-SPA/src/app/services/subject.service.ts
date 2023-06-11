@@ -10,13 +10,22 @@ export class SubjectService {
   constructor(private _http: HttpClient) {}
 
   get all() {
-    return this._http.get(`${this.baseUrl}Subjects`);
-  }
-  byId(id: number) {
-    return this._http.get(`${this.baseUrl}Subjects/${id}`);
+    return this._http.get(`${this.baseUrl}Subjects`)
   }
 
-  editByid(id: number, question: any) {
-    return this._http.put(`${this.baseUrl}Subjects/${id}`, question);
+  byId(id: number) {
+    return this._http.get(`${this.baseUrl}Subjects/${id}`)
+  }
+
+  updateSubject(id: number, subject: any) {
+    return this._http.put(`${this.baseUrl}Subjects/${id}`, subject)
+  }
+
+  addSubject(subject:any){
+    return this._http.post(`${this.baseUrl}Subjects`,subject)
+  }
+
+  deleteSubject(id:number){
+    return this._http.delete(`${this.baseUrl}Subjects/${id}`)
   }
 }
