@@ -31,36 +31,25 @@ body {
   .row {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
-  
-  .column {
-    flex: 1;
-    padding: 10px;
-  }
-  
-  .student-info,
-  .previous-exam {
+ 
+  .student-info
+  {
     background-color: #F6F1F1;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out;
-    height: 400px;
+    height: 300px;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
   }
-  .student-info img {
-    align-self: center;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
+
   
-  .student-info:hover,
-  .previous-exam:hover {
+  .student-info:hover
+  {
     transform: scale(1.05);
   }
   

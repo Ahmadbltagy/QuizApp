@@ -15,6 +15,7 @@ import { AdminpageComponent } from './components/adminpage/adminpage.component';
 import { ExamComponent } from './components/Exam/exam.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { ContactComponent } from './components/contact/contact.component';
     AdminpageComponent,
     ExamComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,

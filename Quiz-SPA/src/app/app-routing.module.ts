@@ -11,6 +11,7 @@ import { SubjectpageComponent } from './components/subjectpage/subjectpage.compo
 import { ExamComponent } from './components/Exam/exam.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'contactus', component: ContactComponent },
   { path: 'home', component: HomeComponent },
   { path: '', component: HomeComponent },
+  {path: '**', component:NotfoundComponent}
 
 
 ];
