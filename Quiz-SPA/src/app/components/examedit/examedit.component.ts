@@ -17,7 +17,7 @@ export class ExameditComponent implements OnInit {
     text: string
     options: [string,boolean][]
   } = { text: '', options: []}
-
+  modal: boolean = false
 
 
   questionForm = new FormGroup({
@@ -78,26 +78,58 @@ export class ExameditComponent implements OnInit {
   }
 
   editSubject(){
-    this._subjectservice.updateSubject(this.subjectId, this.subject).subscribe({
-        next: response => Swal.fire(
-                            'Good job!',
-                            `You Edit ${this.subject?.name} Subject`,
-                            'success'
-                          ),
+    if(this.subject.name.trim() == ''){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: "The subject name shouldn't be empty",
+      })
+    }else{
+      if(this.subject.questions.length != 0){
+        this._subjectservice.updateSubject(this.subjectId, this.subject).subscribe({
+            next: response => Swal.fire(
+                                'Good job!',
+                                `You Edit ${this.subject?.name} Subject`,
+                                'success'
+                              ),
+          }
+        )
+      }else{
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: "Subject should have at least one question",
+        })
       }
-    )
+    }
   }
 
   addSubject(){
-    this._subjectservice.addSubject(this.subject).subscribe({
-      next: response => Swal.fire(
-                          'Good job!',
-                          `You Add ${this.subject?.name} Subject`,
-                          'success'
-                        ).then((result) => {
-                          this.router.navigate([`/admin`])
-                        }),
-    })
+    if(this.subject.name.trim() == ''){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: "The subject name shouldn't be empty",
+      })
+    }else{
+      if(this.subject.questions.length != 0){
+        this._subjectservice.addSubject(this.subject).subscribe({
+          next: response => Swal.fire(
+                              'Good job!',
+                              `You Add ${this.subject?.name} Subject`,
+                              'success'
+                            ).then((result) => {
+                              this.router.navigate([`/admin`])
+                            }),
+        })
+      }else{
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: "The subject should have at least one question",
+        })
+      }
+    }
   }
 
   deleteQuestion(questionIndex:number){
@@ -119,4 +151,5 @@ export class ExameditComponent implements OnInit {
     this.subject.questions.push(this.newQuestion)
     this.newQuestion = { text: '', options: []}
   }
+
 }

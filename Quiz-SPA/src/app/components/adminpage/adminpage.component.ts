@@ -9,16 +9,18 @@ import Swal from 'sweetalert2';
   styleUrls: ['./adminpage.component.css'],
 })
 export class AdminpageComponent implements OnInit {
-  subjects: any;
+  subjects: any[] = [];
 
   constructor(
     private _subjectservice: SubjectService,
     private router: Router
-  ) {}
+  ) {
+
+  }
 
   ngOnInit(): void {
     this._subjectservice.all.subscribe({
-      next: (res) => (this.subjects = res),
+      next: (res: any) => (this.subjects = res),
       error: (err) => console.log(err),
     });
   }

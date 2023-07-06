@@ -52,7 +52,7 @@ body{
   background-color: var(--main-color);
   text-decoration: none;
   text-align: center;
-  width: 100px;
+  width: 250px;
   text-align: center;
   padding: 5px;
   cursor: pointer;
@@ -66,4 +66,8 @@ body{
 
 .bttn:hover{
   background-color: #0f597b;
+}
+
+.bdy {
+  min-height: 60vh;
 }

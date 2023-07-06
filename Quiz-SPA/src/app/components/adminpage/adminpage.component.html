@@ -1,31 +1,37 @@
-<div class="container uppertxt mx-auto">Available Subjects</div>
-<div class="container mx-auto d-flex justify-content-end">
+<h2 class="container uppertxt mt-5 mx-auto">Available Subjects</h2>
+
+<div class="container mx-auto d-flex justify-content-end mt-4">
   <button type="button" class="bttn text-light w-25" (click)="addSubject()">
-    <i class="bi bi-stars me-1"></i> Add Subject
+    <i class="bi bi-plus-lg me-1"></i> Add Subject
   </button>
 </div>
-<div class="bg-light p-5 text-center">
+<div *ngIf="subjects.length == 0" class="d-flex justify-content-center mt-2 bdy">
+  <img src="../../../assets/images/Add files.gif" alt="" class="no-data mx-auto">
+</div>
+<ng-container *ngIf="subjects.length != 0">
+  <div class="p-5 text-center bdy">
     <div class="container">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Subject Name</th>
-                    <th scope="col">Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let x of subjects; let i = index">
-                    <th>{{x.id}}</th>
-                    <td>{{x.name}}</td>
-                    <td>
-                        <i class="bi bi-pencil-square fs-5 text-warning me-2 fs-5" [routerLink]="['/admin', 'edit', x.id]"></i>
-                        <i class="bi bi-trash3-fill fs-5 text-danger" (click)="deleteSubject(x.id, i)"></i>
-                    </td>
-                </tr>
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Subject Name</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let x of subjects; let i = index">
+            <th>{{i+1}}</th>
+            <td>{{x.name}}</td>
+            <td>
+              <i class="bi bi-pencil-square fs-5 text-warning me-2 fs-5" [routerLink]="['/admin', 'edit', x.id]"></i>
+              <i class="bi bi-trash3-fill fs-5 text-danger" (click)="deleteSubject(x.id, i)"></i>
+            </td>
+          </tr>
 
-            </tbody>
-        </table>
+        </tbody>
+      </table>
     </div>
 
-</div>
+  </div>
+</ng-container>

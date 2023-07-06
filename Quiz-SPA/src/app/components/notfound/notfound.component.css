@@ -1,26 +1,29 @@
 .container {
-    text-align: center;
-    margin-top: 100px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+h1 {
+  color: #146C94;
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #146C94;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #19A7CE;
   }
-  
-  h1 {
-    color:#146C94;
-    font-size: 5rem;
-    margin-bottom: 20px;
-  }
-  
-  button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    background-color: #146C94;
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-  
-    &:hover {
-      background-color: #19A7CE;
-    }
-  }
-  
+}
+
+.no-data {
+  height: 400px;
+}

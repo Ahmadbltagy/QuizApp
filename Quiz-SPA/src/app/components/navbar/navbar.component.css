@@ -1,4 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap');
+
 .nav-link
 {
   cursor: pointer;
+}
+
+.logo{
+  position: relative;
+}
+
+.logo-img {
+  width: 40px;
+  position: absolute;
+  left:-25px;
+  top: -11px;
+  rotate: -10deg;
+}
+.logo-text {
+  font-family: 'Dancing Script', cursive;
 }
