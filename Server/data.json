@@ -450,6 +450,15 @@
       "age": "26",
       "role": "normal",
       "id": 7
+    },
+    {
+      "name": "Mustafa Elkholy",
+      "email": "mustafaelkholy7@gmail.com",
+      "password": "123456789",
+      "confirmPassword": "123456789",
+      "age": "25",
+      "role": "normal",
+      "id": 8
     }
   ]
 }

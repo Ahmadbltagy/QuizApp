@@ -1,27 +1,51 @@
-.jumbotron {
-  background-color: #AFD3E2;
-  color: #146C94;
+/* .jumbotron {
+  background-color: #f8f9fa;
   padding: 2rem;
   margin-bottom: 2rem;
+  border-radius: 0.5rem;
 }
 
-h1.display-4 {
-  color: #146C94;
+.lead {
+  font-size: 1.2rem;
 }
 
-.list-group-item {
-  background-color: #F6F1F1;
-  color: #146C94;
-  border-color: #AFD3E2;
+.team-card {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
 }
 
-.jumbotron h3 {
-  color: #146C94;
-  margin-top: 1rem;
+.team-card:hover {
+  transform: translateY(-0.1rem);
 }
 
-.jumbotron p {
-  color: #146C94;
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  margin-bottom: 1rem;
+}
+
+.linkedin-link {
+  font-size: 1.8rem;
+  color: #007bff;
+  transition: color 0.3s ease-in-out;
+}
+
+.linkedin-link:hover {
+  color: #0056b3;
+}
+
+.jumbotron.contact {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.jumbotron.contact p {
   margin-bottom: 0.5rem;
-
-}
+} */
